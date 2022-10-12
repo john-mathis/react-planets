@@ -1,0 +1,48 @@
+/* Google Font import */
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300;500&family=League+Spartan:wght@300;500&display=swap');
+
+
+/* Colors */
+:root {
+  --white: #fff;
+  --dark-blue: #070724;
+  --grey: #38384f;
+  --light-grey: #838391;
+  --baby-blue: #419ebb;
+  --yellow: #eda249;
+  --purple: #6f2ed6;
+  --light-red: #d14c32;
+  --red: #d83a34;
+  --orange: #cd5120;
+  --turquiose: #1ec2a4;
+  --blue: #2d68f0;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(..//src/assets/background-stars.svg);
+  background-color: var(--dark-blue);
+  font-family: Antonio, "sans-serif";
+  color: var(--white);
+}
+
+img {
+  max-width: 100%;
+}
+
+
+.max-width-container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--light-grey);
+  padding-bottom: 1rem;
+}
