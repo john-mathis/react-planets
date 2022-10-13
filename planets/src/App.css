@@ -28,7 +28,7 @@
 body {
   background: url(..//src/assets/background-stars.svg);
   background-color: var(--dark-blue);
-  font-family: Antonio, "sans-serif";
+  font-family: Antonio, Spartan, "sans-serif";
   color: var(--white);
 }
 
