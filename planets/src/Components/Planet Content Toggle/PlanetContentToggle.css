@@ -1,0 +1,16 @@
+.planet-toggle-container {
+    font-family: League Spartan;
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: var(--light-grey);
+    padding: 1rem;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.planet-toggle {
+    cursor: pointer;
+}

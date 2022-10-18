@@ -30,7 +30,12 @@ body {
   background-color: var(--dark-blue);
   font-family: Antonio, Spartan, "sans-serif";
   color: var(--white);
+  overflow: auto;
+  height: 100%;
 }
+
+
+
 
 img {
   max-width: 100%;

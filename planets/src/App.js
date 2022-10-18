@@ -5,6 +5,7 @@ import PlanetJSON from "../src/data.json";
 import Navigation from "./Components/Navigation/Navigation";
 import MobileMenu from "./Components/Mobile Menu/MobileMenu";
 import PlanetDetails from "./Components/Planet Details/PlanetDetails";
+import PlanetContentToggle from "./Components/Planet Content Toggle/PlanetContentToggle";
 
 const App = () => {
   /*
@@ -18,13 +19,28 @@ const App = () => {
     "mobile-menu-container"
   );
 
+  const [planetOverview, setPlanetOverview] = useState(true);
+  const [planetStructure, setPlanetStructure] = useState(false);
+  const [planetSurface, setPlanetSurface] = useState(false);
+
   const isMobileMenuHidden = () => {
     if (!showMobileMenu) {
       setMobileMenuClass("mobile-menu-container active");
+      disableScroll();
     } else {
+      enableScroll();
       setMobileMenuClass("mobile-menu-container hidden");
     }
   };
+
+  const disableScroll = () => {
+    document.body.style.overflow = "hidden";
+  };
+
+  const enableScroll = () => {
+    document.body.style.overflow = "auto";
+  };
+
   return (
     <>
       <Navigation
@@ -33,7 +49,18 @@ const App = () => {
         isMobileMenuHidden={isMobileMenuHidden}
       />
       <MobileMenu mobileMenuClass={mobileMenuClass} />
-      <PlanetDetails PlanetJSON={PlanetJSON} />
+      <PlanetContentToggle
+        setPlanetOverview={setPlanetOverview}
+        setPlanetStructure={setPlanetStructure}
+        setPlanetSurface={setPlanetSurface}
+      />
+
+      <PlanetDetails
+        PlanetJSON={PlanetJSON}
+        planetOverview={planetOverview}
+        planetStructure={planetStructure}
+        planetSurface={planetSurface}
+      />
     </>
   );
 };
