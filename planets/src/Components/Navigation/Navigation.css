@@ -73,7 +73,6 @@
     .desktop-navigation-container {
         display: flex;
         justify-content: space-around;
-        max-width: 41rem;
     }
 
     .desktop-navigation {

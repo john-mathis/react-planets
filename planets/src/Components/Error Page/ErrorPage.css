@@ -1,0 +1,5 @@
+.error-page-container {
+    display: grid;
+    place-items: center;
+    margin-top: 5rem;
+}

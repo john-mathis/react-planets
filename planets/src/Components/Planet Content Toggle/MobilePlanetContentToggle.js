@@ -1,16 +1,16 @@
 import React from "react";
-import "./PlanetContentToggle.css";
+import "./MobilePlanetContentToggle.css";
 
-const PlanetContentToggle = ({
+const MobilePlanetContentToggle = ({
   setPlanetOverview,
   setPlanetStructure,
   setPlanetSurface,
 }) => {
   return (
     <>
-      <div className="planet-toggle-container border-bottom">
+      <div className="mobile-planet-toggle-container border-bottom">
         <p
-          className="planet-toggle"
+          className="mobile-planet-toggle"
           onClick={() => {
             setPlanetOverview(true);
             setPlanetStructure(false);
@@ -20,7 +20,7 @@ const PlanetContentToggle = ({
           Overview
         </p>
         <p
-          className="planet-toggle"
+          className="mobile-planet-toggle"
           onClick={() => {
             setPlanetStructure(true);
             setPlanetOverview(false);
@@ -30,7 +30,7 @@ const PlanetContentToggle = ({
           Structure
         </p>
         <p
-          className="planet-toggle"
+          className="mobile-planet-toggle"
           onClick={() => {
             setPlanetSurface(true);
             setPlanetOverview(false);
@@ -44,4 +44,4 @@ const PlanetContentToggle = ({
   );
 };
 
-export default PlanetContentToggle;
+export default MobilePlanetContentToggle;

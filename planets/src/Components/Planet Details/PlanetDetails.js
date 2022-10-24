@@ -7,13 +7,17 @@ import Chevron from "../../assets/icon-source.svg";
 const PlanetDetails = ({
   PlanetJSON,
   planetOverview,
+  setPlanetOverview,
   planetStructure,
+  setPlanetStructure,
   planetSurface,
+  setPlanetSurface,
+  activePlanet,
 }) => {
   console.log(PlanetJSON);
+  console.log(activePlanet);
 
   const planetPage = PlanetJSON.map((planets) => {
-    console.log(planets.images.planet);
     let planetInfo;
 
     if (planetOverview) {
@@ -31,20 +35,58 @@ const PlanetDetails = ({
     return (
       <React.Fragment key={planets.name}>
         <div className="planet-detail-container">
-          <picture className="planet-img-container">
-            <img alt="planet" className="planet-img" src={img} />
-          </picture>
+          <div className="desktop-description-container">
+            <picture className="planet-img-container">
+              <img alt="planet" className="planet-img" src={img} />
+            </picture>
 
-          <div className="planet-info-container">
-            <h2 className="planet-name">{planets.name}</h2>
-            <p className="planet-info">{planetInfo}</p>
-            <p className="planet-source">
-              Source:
-              <a href={planets.overview.source}>
-                <span>Wikipedia</span>
-              </a>
-              <img alt="" src={Chevron} />
-            </p>
+            <div className="desktop-planet-description">
+              <div className="planet-info-container">
+                <h2 className="planet-name">{planets.name}</h2>
+                <p className="planet-info">{planetInfo}</p>
+                <p className="planet-source">
+                  Source:
+                  <a href={planets.overview.source}>
+                    <span>Wikipedia</span>
+                  </a>
+                  <img alt="" src={Chevron} />
+                </p>
+              </div>
+
+              <div className="desktop-planet-content-toggle">
+                <p
+                  className="desktop-planet-toggle full-border"
+                  onClick={() => {
+                    setPlanetOverview(true);
+                    setPlanetStructure(false);
+                    setPlanetSurface(false);
+                  }}
+                >
+                  <span className="stat-description">01</span> Overview
+                </p>
+                <p
+                  className="desktop-planet-toggle full-border"
+                  onClick={() => {
+                    setPlanetOverview(false);
+                    setPlanetStructure(true);
+                    setPlanetSurface(false);
+                  }}
+                >
+                  <span className="stat-description">02</span> Internal
+                  Structure
+                </p>
+                <p
+                  className="desktop-planet-toggle full-border"
+                  onClick={() => {
+                    setPlanetOverview(false);
+                    setPlanetStructure(false);
+                    setPlanetSurface(true);
+                  }}
+                >
+                  <span className="stat-description">03</span> Surface
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="planet-stats-container">

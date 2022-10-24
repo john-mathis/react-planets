@@ -1,4 +1,4 @@
-.planet-toggle-container {
+.mobile-planet-toggle-container {
     font-family: League Spartan;
     text-transform: uppercase;
     font-size: .8rem;
@@ -10,7 +10,14 @@
 
 }
 
+@media screen and (min-width:768px) {
+    .mobile-planet-toggle-container {
+        display: none;
+    }
+}
 
-.planet-toggle {
+
+
+.mobile-planet-toggle {
     cursor: pointer;
 }

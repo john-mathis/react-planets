@@ -1,11 +1,14 @@
 import "./App.css";
 import React, { useState } from "react";
 
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 import PlanetJSON from "../src/data.json";
 import Navigation from "./Components/Navigation/Navigation";
 import MobileMenu from "./Components/Mobile Menu/MobileMenu";
 import PlanetDetails from "./Components/Planet Details/PlanetDetails";
-import PlanetContentToggle from "./Components/Planet Content Toggle/PlanetContentToggle";
+import MobilePlanetContentToggle from "./Components/Planet Content Toggle/MobilePlanetContentToggle";
+import ErrorPage from "./Components/Error Page/ErrorPage";
 
 const App = () => {
   /*
@@ -19,6 +22,8 @@ const App = () => {
     "mobile-menu-container"
   );
 
+  const [activePlanet, setActivePlanet] = useState("");
+
   const [planetOverview, setPlanetOverview] = useState(true);
   const [planetStructure, setPlanetStructure] = useState(false);
   const [planetSurface, setPlanetSurface] = useState(false);
@@ -26,42 +31,50 @@ const App = () => {
   const isMobileMenuHidden = () => {
     if (!showMobileMenu) {
       setMobileMenuClass("mobile-menu-container active");
-      disableScroll();
+      document.body.style.overflow = "hidden";
     } else {
-      enableScroll();
+      document.body.style.overflow = "auto";
       setMobileMenuClass("mobile-menu-container hidden");
     }
   };
 
-  const disableScroll = () => {
-    document.body.style.overflow = "hidden";
-  };
-
-  const enableScroll = () => {
-    document.body.style.overflow = "auto";
-  };
+  console.log(activePlanet);
 
   return (
-    <>
+    <Router>
       <Navigation
         showMobileMenu={showMobileMenu}
         setShowMobileMenu={setShowMobileMenu}
         isMobileMenuHidden={isMobileMenuHidden}
+        activePlanet={activePlanet}
+        setActivePlanet={setActivePlanet}
       />
       <MobileMenu mobileMenuClass={mobileMenuClass} />
-      <PlanetContentToggle
+      <MobilePlanetContentToggle
         setPlanetOverview={setPlanetOverview}
         setPlanetStructure={setPlanetStructure}
         setPlanetSurface={setPlanetSurface}
       />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <PlanetDetails
+              PlanetJSON={PlanetJSON}
+              planetOverview={planetOverview}
+              setPlanetOverview={setPlanetOverview}
+              planetStructure={planetStructure}
+              setPlanetStructure={setPlanetStructure}
+              planetSurface={planetSurface}
+              setPlanetSurface={setPlanetSurface}
+              activePlanet={activePlanet}
+            />
+          }
+        />
 
-      <PlanetDetails
-        PlanetJSON={PlanetJSON}
-        planetOverview={planetOverview}
-        planetStructure={planetStructure}
-        planetSurface={planetSurface}
-      />
-    </>
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </Router>
   );
 };
 
