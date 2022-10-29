@@ -1,8 +1,9 @@
 import React from "react";
 import "..//Mobile Menu/MobileMenu.css";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
-const MobileMenu = ({ mobileMenuClass }) => {
+const MobileMenu = ({ mobileMenuClass, setActivePlanet, planetNames }) => {
   return (
     <>
       <div className={mobileMenuClass}>

@@ -7,13 +7,13 @@ const Navigation = ({
   showMobileMenu,
   setShowMobileMenu,
   isMobileMenuHidden,
-  activePlanet,
+  planetNames,
   setActivePlanet,
 }) => {
   return (
     <>
       <div className="navigation-container border-bottom">
-        <h2 className="logo">The Planets</h2>
+        <h1 className="logo">The Planets</h1>
         <img
           className="hamburger"
           alt="open menu icon"
@@ -29,30 +29,65 @@ const Navigation = ({
             <li
               className="desktop-nav-link"
               onClick={() => {
-                setActivePlanet("mercury");
+                setActivePlanet(planetNames.mercury);
               }}
             >
               <NavLink to="/">Mercury</NavLink>
             </li>
-            <li className="desktop-nav-link">
+            <li
+              className="desktop-nav-link"
+              onClick={() => {
+                setActivePlanet(planetNames.venus);
+              }}
+            >
               <NavLink to="/venus">Venus</NavLink>
             </li>
-            <li className="desktop-nav-link">
+            <li
+              className="desktop-nav-link"
+              onClick={() => {
+                setActivePlanet(planetNames.earth);
+              }}
+            >
               <NavLink to="/earth">Earth</NavLink>
             </li>
-            <li className="desktop-nav-link">
+            <li
+              className="desktop-nav-link"
+              onClick={() => {
+                setActivePlanet(planetNames.mars);
+              }}
+            >
               <NavLink to="/mars">Mars</NavLink>
             </li>
-            <li className="desktop-nav-link">
+            <li
+              className="desktop-nav-link"
+              onClick={() => {
+                setActivePlanet(planetNames.jupiter);
+              }}
+            >
               <NavLink to="/jupiter">Jupiter</NavLink>
             </li>
-            <li className="desktop-nav-link">
+            <li
+              className="desktop-nav-link"
+              onClick={() => {
+                setActivePlanet(planetNames.saturn);
+              }}
+            >
               <NavLink to="/saturn">Saturn</NavLink>
             </li>
-            <li className="desktop-nav-link">
+            <li
+              className="desktop-nav-link"
+              onClick={() => {
+                setActivePlanet(planetNames.uranus);
+              }}
+            >
               <NavLink to="/uranus">Uranus</NavLink>
             </li>
-            <li className="desktop-nav-link">
+            <li
+              className="desktop-nav-link"
+              onClick={() => {
+                setActivePlanet(planetNames.neptune);
+              }}
+            >
               <NavLink to="/neptune">Neptune</NavLink>
             </li>
           </ul>

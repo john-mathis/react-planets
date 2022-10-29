@@ -15,38 +15,58 @@ const PlanetDetails = ({
   activePlanet,
 }) => {
   console.log(PlanetJSON);
-  console.log(activePlanet);
 
   const planetPage = PlanetJSON.map((planets) => {
-    let planetInfo;
+    // let planetInfo;
+    // if (planetOverview) {
+    //   planetInfo = planets.overview.content;
+    // }
+    // if (planetStructure) {
+    //   planetInfo = planets.structure.content;
+    // }
+    // if (planetSurface) {
+    //   planetInfo = planets.geology.content;
+    // }
+  });
 
-    if (planetOverview) {
-      planetInfo = planets.overview.content;
-    }
+  let planetInfo;
+  let planetSource;
+  let activeIMG;
 
-    if (planetStructure) {
-      planetInfo = planets.structure.content;
-    }
+  if (planetOverview) {
+    planetInfo = activePlanet.overview.content;
+    planetSource = activePlanet.overview.source;
+    activeIMG = activePlanet.images.geology;
+  }
 
-    if (planetSurface) {
-      planetInfo = planets.geology.content;
-    }
+  if (planetStructure) {
+    planetInfo = activePlanet.structure.content;
+    planetSource = activePlanet.structure.source;
+    activeIMG = activePlanet.images.internal;
+  }
 
-    return (
-      <React.Fragment key={planets.name}>
+  if (planetSurface) {
+    planetInfo = activePlanet.geology.content;
+    planetSource = activePlanet.geology.source;
+    activeIMG = activePlanet.images.planet;
+  }
+
+  return (
+    <>
+      <div className="planet-details-container">
         <div className="planet-detail-container">
           <div className="desktop-description-container">
             <picture className="planet-img-container">
-              <img alt="planet" className="planet-img" src={img} />
+              <img alt="planet" className="planet-img" src={activeIMG} />
             </picture>
 
             <div className="desktop-planet-description">
               <div className="planet-info-container">
-                <h2 className="planet-name">{planets.name}</h2>
+                <h2 className="planet-name">{activePlanet.name}</h2>
                 <p className="planet-info">{planetInfo}</p>
                 <p className="planet-source">
                   Source:
-                  <a href={planets.overview.source}>
+                  <a href={planetSource}>
                     <span>Wikipedia</span>
                   </a>
                   <img alt="" src={Chevron} />
@@ -92,29 +112,23 @@ const PlanetDetails = ({
           <div className="planet-stats-container">
             <p className="planet-stats full-border">
               <span className="stat-description"> Rotation time</span>
-              {planets.rotation}
+              {activePlanet.rotation}
             </p>
             <p className="planet-stats full-border">
               <span className="stat-description">revolution time </span>
-              {planets.revolution}
+              {activePlanet.revolution}
             </p>
             <p className="planet-stats full-border">
               <span className="stat-description"> Radius</span>
-              {planets.radius}
+              {activePlanet.radius}
             </p>
             <p className="planet-stats full-border">
               <span className="stat-description">Average temp</span>
-              {planets.temperature}
+              {activePlanet.temperature}
             </p>
           </div>
         </div>
-      </React.Fragment>
-    );
-  });
-
-  return (
-    <>
-      <div className="planet-details-container">{planetPage}</div>
+      </div>
     </>
   );
 };
