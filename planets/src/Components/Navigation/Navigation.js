@@ -1,6 +1,6 @@
 import React from "react";
 import "..//Navigation/Navigation.css";
-import Hamburger from "..//..//assets/hamburger.svg";
+import Hamburger from "../Logos/hamburger.svg";
 import { NavLink } from "react-router-dom";
 
 const Navigation = ({

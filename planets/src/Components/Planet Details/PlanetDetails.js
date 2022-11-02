@@ -1,7 +1,7 @@
 import React from "react";
 import "..//Planet Details/PlanetDetails.css";
 
-import Chevron from "../../assets/icon-source.svg";
+import Chevron from "../Logos/icon-source.svg";
 
 const PlanetDetails = ({
   PlanetJSON,
