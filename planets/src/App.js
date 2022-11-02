@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import PlanetJSON from "../src/data.json";
 import Navigation from "./Components/Navigation/Navigation";
@@ -48,91 +48,6 @@ const App = () => {
   };
   const [activePlanet, setActivePlanet] = useState(planetNames.mercury);
 
-  /*
-
-<React.Fragment key={planets.name}>
-        <main>
-          <div className="planet-detail-container">
-            <div className="desktop-description-container">
-              <picture className="planet-img-container">
-                <img alt="planet" className="planet-img" src={img} />
-              </picture>
-
-              <div className="desktop-planet-description">
-                <div className="planet-info-container">
-                  <h2 className="planet-name">{planets.name}</h2>
-                  <p className="planet-info">{planetInfo}</p>
-                  <p className="planet-source">
-                    Source:
-                    <a href={planets.overview.source}>
-                      <span>Wikipedia</span>
-                    </a>
-                    <img alt="" src={Chevron} />
-                  </p>
-                </div>
-
-                <div className="desktop-planet-content-toggle">
-                  <p
-                    className="desktop-planet-toggle full-border"
-                    onClick={() => {
-                      setPlanetOverview(true);
-                      setPlanetStructure(false);
-                      setPlanetSurface(false);
-                    }}
-                  >
-                    <span className="stat-description">01</span> Overview
-                  </p>
-                  <p
-                    className="desktop-planet-toggle full-border"
-                    onClick={() => {
-                      setPlanetOverview(false);
-                      setPlanetStructure(true);
-                      setPlanetSurface(false);
-                    }}
-                  >
-                    <span className="stat-description">02</span> Internal
-                    Structure
-                  </p>
-                  <p
-                    className="desktop-planet-toggle full-border"
-                    onClick={() => {
-                      setPlanetOverview(false);
-                      setPlanetStructure(false);
-                      setPlanetSurface(true);
-                    }}
-                  >
-                    <span className="stat-description">03</span> Surface
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="planet-stats-container">
-              <p className="planet-stats full-border">
-                <span className="stat-description"> Rotation time</span>
-                {planets.rotation}
-              </p>
-              <p className="planet-stats full-border">
-                <span className="stat-description">revolution time </span>
-                {planets.revolution}
-              </p>
-              <p className="planet-stats full-border">
-                <span className="stat-description"> Radius</span>
-                {planets.radius}
-              </p>
-              <p className="planet-stats full-border">
-                <span className="stat-description">Average temp</span>
-                {planets.temperature}
-              </p>
-            </div>
-          </div>
-        </main>
-      </React.Fragment>
-  */
-
-  console.log(activePlanet.name);
-  console.log(activePlanet.name === "mercury" ? "Works" : "Doesn't");
-
   return (
     <Router>
       <Navigation
@@ -146,6 +61,8 @@ const App = () => {
         mobileMenuClass={mobileMenuClass}
         setActivePlanet={setActivePlanet}
         planetNames={planetNames}
+        isMobileMenuHidden={isMobileMenuHidden}
+        setMobileMenuClass={setMobileMenuClass}
       />
       <MobilePlanetContentToggle
         setPlanetOverview={setPlanetOverview}

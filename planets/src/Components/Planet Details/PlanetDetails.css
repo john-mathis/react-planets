@@ -49,7 +49,7 @@
 }
 
 .planet-img {
-    max-width: 7rem;
+    max-width: 16rem;
 }
 
 @media screen and (min-width:1200px) {

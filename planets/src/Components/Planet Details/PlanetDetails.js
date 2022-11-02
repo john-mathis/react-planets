@@ -1,7 +1,6 @@
 import React from "react";
 import "..//Planet Details/PlanetDetails.css";
 
-import img from "../../assets/planet-mercury.svg";
 import Chevron from "../../assets/icon-source.svg";
 
 const PlanetDetails = ({
@@ -16,19 +15,6 @@ const PlanetDetails = ({
 }) => {
   console.log(PlanetJSON);
 
-  const planetPage = PlanetJSON.map((planets) => {
-    // let planetInfo;
-    // if (planetOverview) {
-    //   planetInfo = planets.overview.content;
-    // }
-    // if (planetStructure) {
-    //   planetInfo = planets.structure.content;
-    // }
-    // if (planetSurface) {
-    //   planetInfo = planets.geology.content;
-    // }
-  });
-
   let planetInfo;
   let planetSource;
   let activeIMG;
@@ -36,7 +22,7 @@ const PlanetDetails = ({
   if (planetOverview) {
     planetInfo = activePlanet.overview.content;
     planetSource = activePlanet.overview.source;
-    activeIMG = activePlanet.images.geology;
+    activeIMG = activePlanet.images.planet;
   }
 
   if (planetStructure) {
@@ -48,8 +34,10 @@ const PlanetDetails = ({
   if (planetSurface) {
     planetInfo = activePlanet.geology.content;
     planetSource = activePlanet.geology.source;
-    activeIMG = activePlanet.images.planet;
+    activeIMG = activePlanet.images.geology;
   }
+
+  console.log(activeIMG);
 
   return (
     <>
@@ -57,7 +45,7 @@ const PlanetDetails = ({
         <div className="planet-detail-container">
           <div className="desktop-description-container">
             <picture className="planet-img-container">
-              <img alt="planet" className="planet-img" src={activeIMG} />
+              <img src={activeIMG} alt="planet" className="planet-img" />
             </picture>
 
             <div className="desktop-planet-description">
