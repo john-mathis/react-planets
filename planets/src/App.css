@@ -104,11 +104,13 @@ img {
   }
 }
 
-.purple {
-  background-color: var(--purple);
-}
+
 
 @media screen and (min-width: 768px) {
+  .purple {
+    background-color: var(--purple);
+  }
+
   .light-grey {
     background-color: var(--light-grey);
   }

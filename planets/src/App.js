@@ -22,6 +22,17 @@ const App = () => {
   const [planetSurfaceIMG, setPlanetSurfaceIMG] = useState(
     "planet-surface hide"
   );
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const isMobileMenuHidden = () => {
+    if (!showMobileMenu) {
+      setMobileMenuClass("mobile-menu-container active");
+      document.body.style.overflow = "hidden";
+    } else {
+      setMobileMenuClass("mobile-menu-container hidden");
+      document.body.style.overflow = "auto";
+    }
+  };
 
   const planetNames = {
     mercury: PlanetJSON[0],
@@ -39,14 +50,21 @@ const App = () => {
   return (
     <Router>
       <Navigation
+        isMobileMenuHidden={isMobileMenuHidden}
+        setShowMobileMenu={setShowMobileMenu}
+        showMobileMenu={showMobileMenu}
         setMobileMenuClass={setMobileMenuClass}
         setActivePlanet={setActivePlanet}
         planetNames={planetNames}
+        activePlanet={activePlanet}
       />
       <MobileMenu
+        isMobileMenuHidden={isMobileMenuHidden}
         mobileMenuClass={mobileMenuClass}
+        setMobileMenuClass={setMobileMenuClass}
         setActivePlanet={setActivePlanet}
         planetNames={planetNames}
+        setShowMobileMenu={setShowMobileMenu}
       />
       <MobilePlanetContentToggle
         activePlanet={activePlanet}

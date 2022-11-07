@@ -3,14 +3,31 @@ import "..//Mobile Menu/MobileMenu.css";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
-const MobileMenu = ({ mobileMenuClass, setActivePlanet, planetNames }) => {
+const MobileMenu = ({
+  mobileMenuClass,
+  setShowMobileMenu,
+  setActivePlanet,
+  planetNames,
+  setMobileMenuClass,
+}) => {
+  const handleMobileMenu = (planet, value, className) => {
+    setActivePlanet(planet);
+    setShowMobileMenu(value);
+    setMobileMenuClass(className);
+    document.body.style.overflow = "auto";
+  };
+
   return (
     <>
       <div className={mobileMenuClass}>
         <div
           className="mobile-menu-link border-bottom"
           onClick={() => {
-            setActivePlanet(planetNames.mercury);
+            handleMobileMenu(
+              planetNames.mercury,
+              false,
+              "mobile-menu-container hidden"
+            );
           }}
         >
           <div className="planet-circle mercury"></div>
@@ -23,7 +40,11 @@ const MobileMenu = ({ mobileMenuClass, setActivePlanet, planetNames }) => {
         <div
           className="mobile-menu-link border-bottom"
           onClick={() => {
-            setActivePlanet(planetNames.venus);
+            handleMobileMenu(
+              planetNames.venus,
+              false,
+              "mobile-menu-container hidden"
+            );
           }}
         >
           <div className="planet-circle venus"></div>
@@ -36,7 +57,11 @@ const MobileMenu = ({ mobileMenuClass, setActivePlanet, planetNames }) => {
         <div
           className="mobile-menu-link border-bottom"
           onClick={() => {
-            setActivePlanet(planetNames.earth);
+            handleMobileMenu(
+              planetNames.earth,
+              false,
+              "mobile-menu-container hidden"
+            );
           }}
         >
           <div className="planet-circle earth"></div>
@@ -49,7 +74,11 @@ const MobileMenu = ({ mobileMenuClass, setActivePlanet, planetNames }) => {
         <div
           className="mobile-menu-link border-bottom"
           onClick={() => {
-            setActivePlanet(planetNames.mars);
+            handleMobileMenu(
+              planetNames.mars,
+              false,
+              "mobile-menu-container hidden"
+            );
           }}
         >
           <div className="planet-circle mars"></div>
@@ -62,7 +91,11 @@ const MobileMenu = ({ mobileMenuClass, setActivePlanet, planetNames }) => {
         <div
           className="mobile-menu-link border-bottom"
           onClick={() => {
-            setActivePlanet(planetNames.jupiter);
+            handleMobileMenu(
+              planetNames.jupiter,
+              false,
+              "mobile-menu-container hidden"
+            );
           }}
         >
           <div className="planet-circle jupiter"></div>
@@ -75,7 +108,11 @@ const MobileMenu = ({ mobileMenuClass, setActivePlanet, planetNames }) => {
         <div
           className="mobile-menu-link border-bottom"
           onClick={() => {
-            setActivePlanet(planetNames.saturn);
+            handleMobileMenu(
+              planetNames.saturn,
+              false,
+              "mobile-menu-container hidden"
+            );
           }}
         >
           <div className="planet-circle saturn"></div>
@@ -88,7 +125,11 @@ const MobileMenu = ({ mobileMenuClass, setActivePlanet, planetNames }) => {
         <div
           className="mobile-menu-link border-bottom"
           onClick={() => {
-            setActivePlanet(planetNames.uranus);
+            handleMobileMenu(
+              planetNames.uranus,
+              false,
+              "mobile-menu-container hidden"
+            );
           }}
         >
           <div className="planet-circle uranus"></div>
@@ -101,7 +142,11 @@ const MobileMenu = ({ mobileMenuClass, setActivePlanet, planetNames }) => {
         <div
           className="mobile-menu-link"
           onClick={() => {
-            setActivePlanet(planetNames.neptune);
+            handleMobileMenu(
+              planetNames.neptune,
+              false,
+              "mobile-menu-container hidden"
+            );
           }}
         >
           <div className="planet-circle neptune"></div>
