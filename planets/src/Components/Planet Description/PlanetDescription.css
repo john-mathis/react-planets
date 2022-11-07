@@ -1,0 +1,66 @@
+.desktop-planet-description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (min-width:1200px) {
+    .desktop-planet-description {
+        flex-direction: column;
+    }
+}
+
+.planet-info-container {
+    font-family: League Spartan;
+    max-width: 20rem;
+    margin: 2rem auto 2rem;
+}
+
+@media screen and (min-width:768px) {
+    .planet-info-container {
+        margin: 2rem 0;
+    }
+}
+
+.planet-name {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-family: "Antonio";
+}
+
+@media screen and (min-width:768px) {
+    .planet-name {
+        font-size: 3rem;
+        font-weight: 400;
+    }
+}
+
+.planet-info {
+    line-height: 1.5;
+    font-size: .85rem;
+    margin-top: 1rem;
+    font-family: "League Spartan";
+}
+
+.planet-source {
+    margin-top: 2rem;
+    color: var(--light-grey);
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem auto 1rem;
+    max-width: 8.6rem;
+}
+
+@media screen and (min-width:768px) {
+    .planet-source {
+        margin: 1rem 0;
+
+    }
+}
+
+.source-link {
+    color: var(--light-grey);
+}

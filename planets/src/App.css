@@ -52,3 +52,84 @@ img {
   border-bottom: 1px solid var(--light-grey);
   padding-bottom: 1rem;
 }
+
+.planet-link {
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.full-border {
+  border: 1px solid var(--grey);
+  min-width: 15rem;
+  margin: .6rem 0;
+  padding: .2rem;
+}
+
+.stat-description {
+  text-transform: uppercase;
+  font-size: .8rem;
+  color: var(--light-grey);
+}
+
+
+@media screen and (max-width:768px) {
+  .purple {
+    border-bottom: 4px solid var(--purple);
+  }
+
+
+  .light-grey {
+    border-bottom: 4px solid var(--light-grey);
+  }
+
+  .orange {
+    border-bottom: 4px solid var(--orange);
+  }
+
+  .baby-blue {
+    border-bottom: 4px solid var(--baby-blue);
+  }
+
+  .yellow {
+    border-bottom: 4px solid var(--yellow);
+  }
+
+  .turquiose {
+    border-bottom: 4px solid var(--turquiose);
+  }
+
+  .light-red {
+    border-bottom: 4px solid var(--light-red);
+  }
+}
+
+.purple {
+  background-color: var(--purple);
+}
+
+@media screen and (min-width: 768px) {
+  .light-grey {
+    background-color: var(--light-grey);
+  }
+
+  .orange {
+    background-color: var(--orange);
+  }
+
+  .baby-blue {
+    background-color: var(--baby-blue);
+  }
+
+  .yellow {
+    background-color: var(--yellow);
+  }
+
+  .turquiose {
+    background-color: var(--turquiose);
+  }
+
+  .light-red {
+    background-color: var(--light-red);
+  }
+}

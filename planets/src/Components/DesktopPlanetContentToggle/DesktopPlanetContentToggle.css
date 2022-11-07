@@ -1,0 +1,36 @@
+@media screen and (max-width:767px) {
+    .desktop-planet-content-toggle {
+        display: none;
+    }
+}
+
+
+.desktop-planet-toggle {
+    text-transform: uppercase;
+    min-height: 2.5rem;
+    min-width: 17rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+
+.active-info {
+    background-color: var(--purple);
+}
+
+.desktop-planet-toggle:hover {
+    background-color: var(--grey);
+}
+
+@media screen and (min-width:1200px) {
+    .desktop-planet-toggle {
+        min-width: 20rem;
+    }
+}
+
+.number {
+    margin: 0 1rem;
+}

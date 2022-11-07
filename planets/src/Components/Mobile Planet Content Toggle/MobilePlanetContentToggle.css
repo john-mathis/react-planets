@@ -21,3 +21,8 @@
 .mobile-planet-toggle {
     cursor: pointer;
 }
+
+.active-toggle {
+    color: var(--white);
+    padding-bottom: .2rem;
+}

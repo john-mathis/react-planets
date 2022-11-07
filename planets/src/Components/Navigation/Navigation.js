@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "..//Navigation/Navigation.css";
 import Hamburger from "../Logos/hamburger.svg";
 import { NavLink } from "react-router-dom";
 
-const Navigation = ({
-  showMobileMenu,
-  setShowMobileMenu,
-  isMobileMenuHidden,
-  planetNames,
-  setActivePlanet,
-}) => {
+const Navigation = ({ planetNames, setActivePlanet, setMobileMenuClass }) => {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const isMobileMenuHidden = () => {
+    if (!showMobileMenu) {
+      setMobileMenuClass("mobile-menu-container active");
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+      setMobileMenuClass("mobile-menu-container hidden");
+    }
+  };
   return (
     <>
       <div className="navigation-container border-bottom">
@@ -32,7 +37,10 @@ const Navigation = ({
                 setActivePlanet(planetNames.mercury);
               }}
             >
-              <NavLink to="/">Mercury</NavLink>
+              <NavLink className="planet-link" to="/">
+                {" "}
+                Mercury
+              </NavLink>
             </li>
             <li
               className="desktop-nav-link"
@@ -40,7 +48,9 @@ const Navigation = ({
                 setActivePlanet(planetNames.venus);
               }}
             >
-              <NavLink to="/venus">Venus</NavLink>
+              <NavLink className="planet-link" to="/venus">
+                Venus
+              </NavLink>
             </li>
             <li
               className="desktop-nav-link"
@@ -48,7 +58,9 @@ const Navigation = ({
                 setActivePlanet(planetNames.earth);
               }}
             >
-              <NavLink to="/earth">Earth</NavLink>
+              <NavLink className="planet-link" to="/earth">
+                Earth
+              </NavLink>
             </li>
             <li
               className="desktop-nav-link"
@@ -56,7 +68,9 @@ const Navigation = ({
                 setActivePlanet(planetNames.mars);
               }}
             >
-              <NavLink to="/mars">Mars</NavLink>
+              <NavLink className="planet-link" to="/mars">
+                Mars
+              </NavLink>
             </li>
             <li
               className="desktop-nav-link"
@@ -64,7 +78,9 @@ const Navigation = ({
                 setActivePlanet(planetNames.jupiter);
               }}
             >
-              <NavLink to="/jupiter">Jupiter</NavLink>
+              <NavLink className="planet-link" to="/jupiter">
+                Jupiter
+              </NavLink>
             </li>
             <li
               className="desktop-nav-link"
@@ -72,7 +88,9 @@ const Navigation = ({
                 setActivePlanet(planetNames.saturn);
               }}
             >
-              <NavLink to="/saturn">Saturn</NavLink>
+              <NavLink className="planet-link" to="/saturn">
+                Saturn
+              </NavLink>
             </li>
             <li
               className="desktop-nav-link"
@@ -80,7 +98,9 @@ const Navigation = ({
                 setActivePlanet(planetNames.uranus);
               }}
             >
-              <NavLink to="/uranus">Uranus</NavLink>
+              <NavLink className="planet-link" to="/uranus">
+                Uranus
+              </NavLink>
             </li>
             <li
               className="desktop-nav-link"
@@ -88,7 +108,9 @@ const Navigation = ({
                 setActivePlanet(planetNames.neptune);
               }}
             >
-              <NavLink to="/neptune">Neptune</NavLink>
+              <NavLink className="planet-link" to="/neptune">
+                Neptune
+              </NavLink>
             </li>
           </ul>
         </div>
