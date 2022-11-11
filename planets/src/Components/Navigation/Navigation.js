@@ -37,7 +37,7 @@ const Navigation = ({
                 setPlanet(planetNames.mercury);
               }}
             >
-              <NavLink className="planet-link" to="/">
+              <NavLink className="planet-link" to="react-planets/">
                 {" "}
                 Mercury
               </NavLink>
@@ -48,7 +48,7 @@ const Navigation = ({
                 setPlanet(planetNames.venus);
               }}
             >
-              <NavLink className="planet-link" to="/venus">
+              <NavLink className="planet-link" to="react-planets/venus">
                 Venus
               </NavLink>
             </li>
@@ -58,7 +58,7 @@ const Navigation = ({
                 setPlanet(planetNames.earth);
               }}
             >
-              <NavLink className="planet-link" to="/earth">
+              <NavLink className="planet-link" to="react-planets/earth">
                 Earth
               </NavLink>
             </li>
@@ -68,7 +68,7 @@ const Navigation = ({
                 setPlanet(planetNames.mars);
               }}
             >
-              <NavLink className="planet-link" to="/mars">
+              <NavLink className="planet-link" to="react-planets/mars">
                 Mars
               </NavLink>
             </li>
@@ -78,7 +78,7 @@ const Navigation = ({
                 setPlanet(planetNames.jupiter);
               }}
             >
-              <NavLink className="planet-link" to="/jupiter">
+              <NavLink className="planet-link" to="react-planets/jupiter">
                 Jupiter
               </NavLink>
             </li>
@@ -88,7 +88,7 @@ const Navigation = ({
                 setPlanet(planetNames.saturn);
               }}
             >
-              <NavLink className="planet-link" to="/saturn">
+              <NavLink className="planet-link" to="react-planets/saturn">
                 Saturn
               </NavLink>
             </li>
@@ -98,7 +98,7 @@ const Navigation = ({
                 setPlanet(planetNames.uranus);
               }}
             >
-              <NavLink className="planet-link" to="/uranus">
+              <NavLink className="planet-link" to="react-planets/uranus">
                 Uranus
               </NavLink>
             </li>
@@ -108,7 +108,7 @@ const Navigation = ({
                 setPlanet(planetNames.neptune);
               }}
             >
-              <NavLink className="planet-link" to="/neptune">
+              <NavLink className="planet-link" to="react-planets/neptune">
                 Neptune
               </NavLink>
             </li>
