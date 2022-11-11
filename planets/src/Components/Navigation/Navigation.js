@@ -11,8 +11,6 @@ const Navigation = ({
   isMobileMenuHidden,
   activePlanet,
 }) => {
-  console.log(activePlanet.color);
-
   const setPlanet = (planet) => {
     setActivePlanet(planet);
   };

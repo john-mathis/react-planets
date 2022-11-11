@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import "..//Planet Details/PlanetDetails.css";
-import DeesktopPlanetContentToggle from "../DesktopPlanetContentToggle/DeesktopPlanetContentToggle";
 
 import PlanetDescription from "../Planet Description/PlanetDescription";
 import PlanetImageContainer from "../Planet Image Container/PlanetImageContainer";

@@ -45,6 +45,8 @@ const App = () => {
     neptune: PlanetJSON[7],
   };
 
+  console.log(planetNames);
+
   const [activePlanet, setActivePlanet] = useState(planetNames.mercury);
 
   return (
@@ -77,7 +79,7 @@ const App = () => {
       />
       <Routes>
         <Route
-          path={activePlanet.name === "mercury" ? "/" : `/${activePlanet.name}`}
+          path={`${activePlanet.route}`}
           element={
             <PlanetDetails
               planetOverview={planetOverview}
