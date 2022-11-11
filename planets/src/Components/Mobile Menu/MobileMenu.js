@@ -31,7 +31,7 @@ const MobileMenu = ({
           }}
         >
           <div className="planet-circle mercury"></div>
-          <NavLink className="mobile-planet-name" to="/">
+          <NavLink className="mobile-planet-name" to="react-planets/">
             Mercury
           </NavLink>
           <MdKeyboardArrowRight className="arrow-right" />
@@ -48,7 +48,7 @@ const MobileMenu = ({
           }}
         >
           <div className="planet-circle venus"></div>
-          <NavLink className="mobile-planet-name" to="/venus">
+          <NavLink className="mobile-planet-name" to="react-planets/venus">
             Venus
           </NavLink>
           <MdKeyboardArrowRight className="arrow-right" />
@@ -65,7 +65,7 @@ const MobileMenu = ({
           }}
         >
           <div className="planet-circle earth"></div>
-          <NavLink className="mobile-planet-name" to="/earth">
+          <NavLink className="mobile-planet-name" to="react-planets/earth">
             Earth
           </NavLink>
           <MdKeyboardArrowRight className="arrow-right" />
@@ -82,7 +82,7 @@ const MobileMenu = ({
           }}
         >
           <div className="planet-circle mars"></div>
-          <NavLink className="mobile-planet-name" to="/mars">
+          <NavLink className="mobile-planet-name" to="react-planets/mars">
             Mars
           </NavLink>
           <MdKeyboardArrowRight className="arrow-right" />
@@ -99,7 +99,7 @@ const MobileMenu = ({
           }}
         >
           <div className="planet-circle jupiter"></div>
-          <NavLink className="mobile-planet-name" to="/jupiter">
+          <NavLink className="mobile-planet-name" to="react-planets/jupiter">
             Jupiter
           </NavLink>
           <MdKeyboardArrowRight className="arrow-right" />
@@ -116,7 +116,7 @@ const MobileMenu = ({
           }}
         >
           <div className="planet-circle saturn"></div>
-          <NavLink className="mobile-planet-name" to="/saturn">
+          <NavLink className="mobile-planet-name" to="react-planets/saturn">
             Saturn
           </NavLink>
           <MdKeyboardArrowRight className="arrow-right" />
@@ -133,7 +133,7 @@ const MobileMenu = ({
           }}
         >
           <div className="planet-circle uranus"></div>
-          <NavLink className="mobile-planet-name" to="/uranus">
+          <NavLink className="mobile-planet-name" to="react-planets/uranus">
             Uranus
           </NavLink>
           <MdKeyboardArrowRight className="arrow-right" />
@@ -150,7 +150,7 @@ const MobileMenu = ({
           }}
         >
           <div className="planet-circle neptune"></div>
-          <NavLink className="mobile-planet-name" to="/neptune">
+          <NavLink className="mobile-planet-name" to="react-planets/neptune">
             Neptune
           </NavLink>
           <MdKeyboardArrowRight className="arrow-right" />
