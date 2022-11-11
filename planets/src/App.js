@@ -50,7 +50,7 @@ const App = () => {
   const [activePlanet, setActivePlanet] = useState(planetNames.mercury);
 
   return (
-    <Router>
+    <>
       <Navigation
         isMobileMenuHidden={isMobileMenuHidden}
         setShowMobileMenu={setShowMobileMenu}
@@ -98,7 +98,7 @@ const App = () => {
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-    </Router>
+    </>
   );
 };
 
