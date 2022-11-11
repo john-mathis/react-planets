@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.5b55405f.css",
-    "main.js": "./static/js/main.07e79641.js",
-    "static/media/background-stars.svg": "./static/media/background-stars.f6233a6a8d2351c57f2b.svg",
-    "index.html": "./index.html",
-    "static/media/icon-source.svg": "./static/media/icon-source.90231c6845b7449a736412f3da2e3aaa.svg",
-    "static/media/hamburger.svg": "./static/media/hamburger.05a40a49142005f6faf230286ab38214.svg",
-    "main.5b55405f.css.map": "./static/css/main.5b55405f.css.map",
-    "main.07e79641.js.map": "./static/js/main.07e79641.js.map"
+    "main.css": "/react-planets/static/css/main.a28ab07f.css",
+    "main.js": "/react-planets/static/js/main.55494e5f.js",
+    "static/media/background-stars.svg": "/react-planets/static/media/background-stars.f6233a6a8d2351c57f2b.svg",
+    "index.html": "/react-planets/index.html",
+    "static/media/icon-source.svg": "/react-planets/static/media/icon-source.90231c6845b7449a736412f3da2e3aaa.svg",
+    "static/media/hamburger.svg": "/react-planets/static/media/hamburger.05a40a49142005f6faf230286ab38214.svg",
+    "main.a28ab07f.css.map": "/react-planets/static/css/main.a28ab07f.css.map",
+    "main.55494e5f.js.map": "/react-planets/static/js/main.55494e5f.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b55405f.css",
-    "static/js/main.07e79641.js"
+    "static/css/main.a28ab07f.css",
+    "static/js/main.55494e5f.js"
   ]
 }
