@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/react-planets/static/css/main.a28ab07f.css",
-    "main.js": "/react-planets/static/js/main.55494e5f.js",
+    "main.js": "/react-planets/static/js/main.d9c366c7.js",
     "static/media/background-stars.svg": "/react-planets/static/media/background-stars.f6233a6a8d2351c57f2b.svg",
     "index.html": "/react-planets/index.html",
     "static/media/icon-source.svg": "/react-planets/static/media/icon-source.90231c6845b7449a736412f3da2e3aaa.svg",
     "static/media/hamburger.svg": "/react-planets/static/media/hamburger.05a40a49142005f6faf230286ab38214.svg",
     "main.a28ab07f.css.map": "/react-planets/static/css/main.a28ab07f.css.map",
-    "main.55494e5f.js.map": "/react-planets/static/js/main.55494e5f.js.map"
+    "main.d9c366c7.js.map": "/react-planets/static/js/main.d9c366c7.js.map"
   },
   "entrypoints": [
     "static/css/main.a28ab07f.css",
-    "static/js/main.55494e5f.js"
+    "static/js/main.d9c366c7.js"
   ]
 }
