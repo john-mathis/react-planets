@@ -48,6 +48,7 @@ const App = () => {
   console.log(planetNames);
 
   const [activePlanet, setActivePlanet] = useState(planetNames.mercury);
+  console.log(`react-planets${activePlanet.route}`);
 
   return (
     <>
@@ -79,7 +80,8 @@ const App = () => {
       />
       <Routes>
         <Route
-          path={`${activePlanet.route}`}
+          exact
+          path={`react-planets${activePlanet.route}`}
           element={
             <PlanetDetails
               planetOverview={planetOverview}
